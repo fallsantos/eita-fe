@@ -1,10 +1,10 @@
 const axios = require('axios')
 
 const api = axios.create({
-    baseURL: 'https://eita-be.herokuapp.com'
+    baseURL: 'https://eitagram-api.herokuapp.com/'
 })
 
 export default api
 
-//https://eita-be.herokuapp.com
-//http://localhost:3333
+// https://eitagram-api.herokuapp.com/
+// http://localhost:3333
