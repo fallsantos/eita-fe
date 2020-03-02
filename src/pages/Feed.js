@@ -27,7 +27,7 @@ class Feed extends Component {
     }
 
     registerToSocket = () => {
-        const socket = io('https://eita-be.herokuapp.com')
+        const socket = io('https://eitagram-api.herokuapp.com')
 
         socket.on('post', newPost => {
             this.setState({ feed: [newPost, ...this.state.feed] })
@@ -60,7 +60,7 @@ class Feed extends Component {
                             <img src={more} alt="Mais" />
                         </header>
 
-                        <img src={`https://eita-be.herokuapp.com/files/${post.image}`} alt="" />
+                        <img src={post.thumbnail_url} alt="" />
 
                         <footer>
                             <div className="actions">
