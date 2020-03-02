@@ -11,7 +11,7 @@ export default function Header() {
         <header id="main-header">
             <div className="header-content">
                 <Link to="/">
-                    <h1 className="title">Eita!</h1>
+                    <h1 className="title">Eitagram!</h1>
                 </Link>
                 <Link to="/new">
                     <img src={camera} alt="Nova Publicação" />
