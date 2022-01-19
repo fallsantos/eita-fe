@@ -27,7 +27,7 @@ class Feed extends Component {
     }
 
     registerToSocket = () => {
-        const socket = io('https://eitagram-api.herokuapp.com')
+        const socket = io('https://fausantosdev-share-api.herokuapp.com')
 
         socket.on('post', newPost => {
             this.setState({ feed: [newPost, ...this.state.feed] })
