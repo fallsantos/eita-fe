@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import './Header.css'
 
-import logo from '../assets/logo.svg'
+import logo from '../assets/share.png'
 import camera from '../assets/camera.svg'
 
 export default function Header() {
@@ -11,8 +11,11 @@ export default function Header() {
         <header id="main-header">
             <div className="header-content">
                 <Link to="/">
-                    <h1 className="title">Eitagram!</h1>
+                    <img src={logo} width={30} alt='Share Web'/>
                 </Link>
+                
+                    <h1>Share</h1>
+                
                 <Link to="/new">
                     <img src={camera} alt="Nova Publicação" />
                 </Link>
