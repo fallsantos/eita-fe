@@ -5,6 +5,3 @@ const api = axios.create({
 })
 
 export default api
-
-// https://eitagram-api.herokuapp.com/
-// http://localhost:3333
