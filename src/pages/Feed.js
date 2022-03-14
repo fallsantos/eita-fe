@@ -9,7 +9,7 @@ import send from '../assets/send.svg'
 
 import api from '../services/api'
 
-import io from 'socket.io-client'
+import { io } from 'socket.io-client'
 
 class Feed extends Component {
 
@@ -27,19 +27,10 @@ class Feed extends Component {
     }
 
     registerToSocket = () => {
-        const socket = io.connect(process.env.REACT_APP_API_URL,
-            {
-                'transports': ['polling'],
-                'autoConnect': true,
-                'pingInterval': 25000, // default - 25000
-                'pingTimeout': 180000, // default - 60000
-                'reconnection': true,
-                'reconnectionDelay': 1000,
-                'reconnectionDelayMax': 5000,
-                'reconnectionAttempts': 5,
-                'secure': true
-            })
+        
+        const socket = io(process.env.REACT_APP_API_URL)
 
+        
         socket.on('post', newPost => {
             this.setState({ feed: [newPost, ...this.state.feed] })
         })
